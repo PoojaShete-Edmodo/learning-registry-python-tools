@@ -25,6 +25,7 @@ import os
 # Known date formats, add any format you encounter in inputs
 # http://docs.python.org/2/library/datetime.html
 date_formats = ["%m/%d/%y", "%m-%d-%y"]
+headings_comma_separate_ignore = [ "name", "title", "description" ]
 
 def write_json_file(json_string, file_path):
 	"""
@@ -50,12 +51,14 @@ def strip_list_values(array):
 	return array
 
 
-def process_json_list(array):
+def process_json_list(array, heading):
 	"""
 	transforms values to lists
 	"""
 	for index in range(len(array)):
-		array[index] = array[index].split(',')
+		if heading[index] not in headings_comma_separate_ignore:
+			array[index] = array[index].split(',')
+
 	return array
 
 def process_multi_level_field(string):
@@ -81,7 +84,8 @@ def make_json(row, heading, ignored, context=True):
 	"""
 	converts a string line into JSON
 	"""
-	row = process_json_list(row)
+
+	row = process_json_list(row, heading)
 	row = strip_list_values(row)
 
 	"""Computes the entry key"""
