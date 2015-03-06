@@ -6,9 +6,9 @@ The Learning Registry Python Tools provides two projects for bulk operations in 
 
 ##PROJECTS
 
-* *bulk-publisher* - The Bulk Publisher provides scripts to submit digital content metadata into the Learning Registry using an Excel/CSV spreadsheet as a data source.
+* _bulk-publisher_ - The Bulk Publisher provides scripts to submit digital content metadata into the Learning Registry using an Excel/CSV spreadsheet as a data source.
 
-* *extractor* - The Extractor provides scripts to extract envelopes from the Learning Registry and insert JSON-LD records into a MySQL database.
+* _extractor_ - The Extractor provides scripts to extract envelopes from the Learning Registry and insert JSON-LD records into a MySQL database.
 
 ##LICENSING
 
