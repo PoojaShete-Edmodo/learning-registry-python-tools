@@ -1,8 +1,8 @@
-#Learning Registry Python Toolkit
+#Learning Registry Python Bulk Publisher
 
 ##DESCRIPTION
 
-The Learning Registry Python Toolkit provides scripts to submit digital content metadata into the Learning Registry.
+The Learning Registry Python Bulk Publisher provides scripts to submit digital content metadata into the Learning Registry.
 
 ##COMPONENTS
 
@@ -14,4 +14,4 @@ The Learning Registry Python Toolkit provides scripts to submit digital content 
 
 ##LICENSING
 
-Learning Registry Python Toolkit is licensed under the Apache License, Version 2.0 by Learning Tapestry, Inc. See LICENSE-2.0.txt for full license text and rights.
+Learning Registry Python Bulk Publisher is licensed under the Apache License, Version 2.0 by Learning Tapestry, Inc. See LICENSE-2.0.txt for full license text and rights.
