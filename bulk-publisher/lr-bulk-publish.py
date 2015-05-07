@@ -113,7 +113,7 @@ def publish_document(client, file_handle):
 	# Resource data document templete
 	rdt = {
 		"doc_type": "resource_data",
-		"doc_version": "0.23.0",
+		"doc_version": "0.49.0",
 		"active": True,
 		"resource_data_type": "metadata",
 		"resource_locator": "http://example.com/oauth-sample/resource",
@@ -136,6 +136,8 @@ def publish_document(client, file_handle):
 		with file_handle as fh:
 			data = json.load(fh)
 			resource_doc['resource_data'] = data
+			#set the envelope resource_locator based on the doc
+			resource_doc['resource_locator'] = data['url']
 			keywords = get_json_keywords(data)
 	except Exception as e:
 		message = ['failure', 'NULL', os.path.basename(file_handle.name), 'NULL', 'NULL', str(e)]
