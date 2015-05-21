@@ -148,7 +148,11 @@ def publish_document(client, file_handle):
 	if keywords:
 		if "keys" not in resource_doc:
 			resource_doc['keys'] = []
-		resource_doc['keys'].extend(keywords)
+		# keyword lists and keyword strings (single items) need to be added in different ways
+		if isinstance(keywords, list):
+			resource_doc['keys'].extend(keywords)
+		else:
+			resource_doc['keys'].append(keywords)
 	
 	resp, content = client.request(
 						_publish_url, 
